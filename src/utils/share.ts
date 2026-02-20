@@ -1,18 +1,12 @@
-import html2canvas from 'html2canvas'
+import { toPng } from 'html-to-image'
 
 export async function captureElement(element: HTMLElement): Promise<Blob> {
-  const canvas = await html2canvas(element, {
-    backgroundColor: '#ffffff',
-    scale: 2,
-    useCORS: true,
-    logging: false,
+  const dataUrl = await toPng(element, {
+    pixelRatio: 2,
+    cacheBust: true,
   })
-  return new Promise((resolve, reject) => {
-    canvas.toBlob(
-      blob => blob ? resolve(blob) : reject(new Error('Failed to create blob')),
-      'image/png'
-    )
-  })
+  const res = await fetch(dataUrl)
+  return res.blob()
 }
 
 export async function shareImage(blob: Blob, title: string): Promise<boolean> {
