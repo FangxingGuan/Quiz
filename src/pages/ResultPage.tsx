@@ -184,6 +184,40 @@ export default function ResultPage() {
         )}
       </div>
 
+      {/* Answer review for correct/incorrect quizzes */}
+      {quiz.questions.some(q => q.options.some(o => 'correct' in o.tag_weights)) && (
+        <div className="bg-white rounded-2xl p-5 shadow-sm mb-6">
+          <h3 className="text-lg font-bold text-slate-800 mb-4">Answer Review</h3>
+          <div className="grid gap-4">
+            {quiz.questions.map((q, i) => {
+              const correctOption = q.options.find(o => 'correct' in o.tag_weights)
+              const userAnswer = record.answers.find(a => a.questionId === q.id)
+              const userOptionId = userAnswer?.selectedOptionIds[0]
+              const userOption = q.options.find(o => o.id === userOptionId)
+              const isCorrect = userOptionId === correctOption?.id
+              return (
+                <div key={q.id} className="text-sm">
+                  <p className="font-medium text-slate-700 mb-1.5">
+                    <span className={`inline-block w-5 h-5 rounded-full text-xs text-white text-center leading-5 mr-2 ${isCorrect ? 'bg-green-500' : 'bg-red-400'}`}>
+                      {i + 1}
+                    </span>
+                    {q.text}
+                  </p>
+                  <div className="ml-7 space-y-1">
+                    <p className={isCorrect ? 'text-green-600' : 'text-red-500'}>
+                      {isCorrect ? '✓' : '✗'} Your answer: {userOption?.text ?? '—'}
+                    </p>
+                    {!isCorrect && (
+                      <p className="text-green-600">✓ Correct: {correctOption?.text}</p>
+                    )}
+                  </div>
+                </div>
+              )
+            })}
+          </div>
+        </div>
+      )}
+
       {/* Share button */}
       <button
         onClick={() => setShowShare(true)}

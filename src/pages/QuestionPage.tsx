@@ -1,5 +1,5 @@
 import { useParams, Navigate, useNavigate } from 'react-router-dom'
-import { useState, useEffect, useCallback } from 'react'
+import { useState, useEffect, useCallback, useMemo } from 'react'
 import { getQuizById } from '../data'
 import { useQuiz } from '../hooks/useQuiz'
 import ProgressBar from '../components/ProgressBar'
@@ -65,6 +65,19 @@ const multiSubmitColors: Record<string, string> = {
   animal: 'bg-animal hover:bg-animal-dark',
 }
 
+/** Check if a quiz has correct/incorrect answers */
+function quizHasCorrectAnswers(quiz: NonNullable<ReturnType<typeof getQuizById>>): boolean {
+  return quiz.questions.some(q =>
+    q.options.some(o => 'correct' in o.tag_weights)
+  )
+}
+
+/** Find the correct option id for a question (if any) */
+function getCorrectOptionId(question: NonNullable<ReturnType<typeof getQuizById>>['questions'][0]): string | null {
+  const correct = question.options.find(o => 'correct' in o.tag_weights)
+  return correct?.id ?? null
+}
+
 export default function QuestionPage() {
   const { quizId } = useParams<{ quizId: string }>()
   const navigate = useNavigate()
@@ -79,10 +92,14 @@ function QuestionPageInner({ quiz, navigate }: { quiz: NonNullable<ReturnType<ty
   const { currentQuestion, currentIndex, progress, answerQuestion, isLastQuestion, totalQuestions, answers } = useQuiz(quiz)
   const [selectedIds, setSelectedIds] = useState<string[]>([])
   const [animating, setAnimating] = useState(false)
+  const [showingFeedback, setShowingFeedback] = useState(false)
+
+  const hasCorrect = useMemo(() => quizHasCorrectAnswers(quiz), [quiz])
 
   // Reset selection when question changes
   useEffect(() => {
     setSelectedIds([])
+    setShowingFeedback(false)
     setAnimating(true)
     const timer = setTimeout(() => setAnimating(false), 50)
     return () => clearTimeout(timer)
@@ -114,18 +131,31 @@ function QuestionPageInner({ quiz, navigate }: { quiz: NonNullable<ReturnType<ty
   }, [quiz, navigate])
 
   const handleOptionClick = (optionId: string) => {
-    if (!currentQuestion) return
+    if (!currentQuestion || showingFeedback) return
 
     if (currentQuestion.type === 'single') {
       setSelectedIds([optionId])
-      // Auto-advance after a brief visual delay
-      setTimeout(() => {
-        if (isLastQuestion) {
-          handleFinish(answers, currentQuestion.id, [optionId])
-        } else {
-          answerQuestion(currentQuestion.id, [optionId])
-        }
-      }, 300)
+
+      if (hasCorrect) {
+        // Show correct/incorrect feedback, then advance after delay
+        setShowingFeedback(true)
+        setTimeout(() => {
+          if (isLastQuestion) {
+            handleFinish(answers, currentQuestion.id, [optionId])
+          } else {
+            answerQuestion(currentQuestion.id, [optionId])
+          }
+        }, 1500)
+      } else {
+        // Normal: auto-advance after brief visual delay
+        setTimeout(() => {
+          if (isLastQuestion) {
+            handleFinish(answers, currentQuestion.id, [optionId])
+          } else {
+            answerQuestion(currentQuestion.id, [optionId])
+          }
+        }, 300)
+      }
     } else {
       // Multi-select: toggle
       setSelectedIds(prev =>
@@ -149,6 +179,10 @@ function QuestionPageInner({ quiz, navigate }: { quiz: NonNullable<ReturnType<ty
     return <Navigate to={`/quiz/${quiz.id}/result`} replace />
   }
 
+  const correctId = hasCorrect ? getCorrectOptionId(currentQuestion) : null
+  const selectedId = selectedIds[0] ?? null
+  const isCorrectAnswer = showingFeedback && selectedId === correctId
+
   return (
     <div className="p-4 pb-8">
       <ProgressBar
@@ -165,16 +199,37 @@ function QuestionPageInner({ quiz, navigate }: { quiz: NonNullable<ReturnType<ty
           {currentQuestion.text}
         </h2>
 
+        {/* Feedback banner */}
+        {showingFeedback && (
+          <div className={`mb-4 px-4 py-2 rounded-xl text-sm font-semibold text-center ${isCorrectAnswer ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-600'}`}>
+            {isCorrectAnswer ? 'Correct!' : 'Incorrect!'}
+          </div>
+        )}
+
         <div className="grid gap-3">
-          {currentQuestion.options.map(option => (
-            <OptionButton
-              key={option.id}
-              text={option.text}
-              selected={selectedIds.includes(option.id)}
-              onClick={() => handleOptionClick(option.id)}
-              theme={quiz.theme}
-            />
-          ))}
+          {currentQuestion.options.map(option => {
+            let feedback: 'correct' | 'incorrect' | 'revealed' | null = null
+            if (showingFeedback) {
+              if (option.id === selectedId && option.id === correctId) {
+                feedback = 'correct'
+              } else if (option.id === selectedId && option.id !== correctId) {
+                feedback = 'incorrect'
+              } else if (option.id === correctId) {
+                feedback = 'revealed'
+              }
+            }
+            return (
+              <OptionButton
+                key={option.id}
+                text={option.text}
+                selected={!showingFeedback && selectedIds.includes(option.id)}
+                onClick={() => handleOptionClick(option.id)}
+                theme={quiz.theme}
+                feedback={feedback}
+                disabled={showingFeedback}
+              />
+            )
+          })}
         </div>
 
         {currentQuestion.type === 'multi' && (
