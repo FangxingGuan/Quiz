@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+@theme {
+  --color-mbti: #8b5cf6;
+  --color-mbti-light: #ede9fe;
+  --color-mbti-dark: #6d28d9;
+  --color-news: #3b82f6;
+  --color-news-light: #dbeafe;
+  --color-news-dark: #1d4ed8;
+  --color-love: #ec4899;
+  --color-love-light: #fce7f3;
+  --color-love-dark: #be185d;
+  --color-tags: #06b6d4;
+  --color-tags-light: #cffafe;
+  --color-tags-dark: #0e7490;
+  --color-movie: #f97316;
+  --color-movie-light: #fff7ed;
+  --color-movie-dark: #c2410c;
+  --color-horoscope: #6366f1;
+  --color-horoscope-light: #eef2ff;
+  --color-horoscope-dark: #4338ca;
+  --color-stress: #10b981;
+  --color-stress-light: #ecfdf5;
+  --color-stress-dark: #047857;
+  --color-trending: #f43f5e;
+  --color-trending-light: #fff1f2;
+  --color-trending-dark: #be123c;
+  --color-weekend: #f59e0b;
+  --color-weekend-light: #fffbeb;
+  --color-weekend-dark: #b45309;
+  --color-celebrity: #d946ef;
+  --color-celebrity-light: #fdf4ff;
+  --color-celebrity-dark: #a21caf;
+  --color-bigfive: #14b8a6;
+  --color-bigfive-light: #f0fdfa;
+  --color-bigfive-dark: #0f766e;
+  --color-decision: #0ea5e9;
+  --color-decision-light: #f0f9ff;
+  --color-decision-dark: #0369a1;
+  --color-confidence: #eab308;
+  --color-confidence-light: #fefce8;
+  --color-confidence-dark: #a16207;
+  --color-book: #78716c;
+  --color-book-light: #fafaf9;
+  --color-book-dark: #57534e;
+  --color-music: #84cc16;
+  --color-music-light: #f7fee7;
+  --color-music-dark: #4d7c0f;
+  --color-brain: #ef4444;
+  --color-brain-light: #fef2f2;
+  --color-brain-dark: #b91c1c;
+}
+
+body {
+  margin: 0;
+  background-color: #f8fafc;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.fade-enter {
+  opacity: 0;
+  transform: translateX(20px);
+}
+.fade-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}

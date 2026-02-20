@@ -1,0 +1,118 @@
+import type { Quiz } from '../../types'
+
+export const weekendTypeQuiz: Quiz = {
+  id: 'weekend-type',
+  title: 'Your Ideal Weekend',
+  subtitle: 'How should you spend your days off?',
+  description: 'Answer 6 questions about your lifestyle preferences and discover your perfect weekend style. Whether you recharge alone or thrive in a crowd, we have your answer!',
+  emoji: '🌴',
+  theme: 'weekend',
+  duration: '1 min',
+  questionCount: 6,
+  questions: [
+    {
+      id: 'weekend-1',
+      text: 'It\'s Saturday morning. What\'s the first thing you want to do?',
+      type: 'single',
+      options: [
+        { id: 'weekend-1a', text: 'Stay in bed with a good book and a cup of coffee', tag_weights: { homebody: 2 } },
+        { id: 'weekend-1b', text: 'Lace up your hiking boots and hit the trails', tag_weights: { adventurer: 2 } },
+        { id: 'weekend-1c', text: 'Text your friends to plan brunch', tag_weights: { socialite: 2 } },
+        { id: 'weekend-1d', text: 'Set up your workspace for a passion project', tag_weights: { creative: 2 } },
+      ],
+    },
+    {
+      id: 'weekend-2',
+      text: 'You have an unexpected free afternoon. You\'d rather:',
+      type: 'single',
+      options: [
+        { id: 'weekend-2a', text: 'Binge a new series on the couch with snacks', tag_weights: { homebody: 2, creative: 1 } },
+        { id: 'weekend-2b', text: 'Drive somewhere you\'ve never been before', tag_weights: { adventurer: 2 } },
+        { id: 'weekend-2c', text: 'Call up friends for an impromptu hangout', tag_weights: { socialite: 2 } },
+        { id: 'weekend-2d', text: 'Visit an art gallery or work on a creative hobby', tag_weights: { creative: 2 } },
+      ],
+    },
+    {
+      id: 'weekend-3',
+      text: 'Your idea of the perfect Sunday dinner is:',
+      type: 'single',
+      options: [
+        { id: 'weekend-3a', text: 'A home-cooked meal enjoyed in your pajamas', tag_weights: { homebody: 2 } },
+        { id: 'weekend-3b', text: 'Grilling outdoors after a day of exploring', tag_weights: { adventurer: 2, socialite: 1 } },
+        { id: 'weekend-3c', text: 'A big dinner party with lots of friends and laughter', tag_weights: { socialite: 2 } },
+        { id: 'weekend-3d', text: 'Trying a brand new recipe you saw online', tag_weights: { creative: 2, homebody: 1 } },
+      ],
+    },
+    {
+      id: 'weekend-4',
+      text: 'Which weekend activity sounds most exciting to you?',
+      type: 'single',
+      options: [
+        { id: 'weekend-4a', text: 'A full day of gaming, movies, or reading at home', tag_weights: { homebody: 2 } },
+        { id: 'weekend-4b', text: 'Kayaking, rock climbing, or a camping trip', tag_weights: { adventurer: 2 } },
+        { id: 'weekend-4c', text: 'A rooftop party or a festival with your crew', tag_weights: { socialite: 2 } },
+        { id: 'weekend-4d', text: 'A painting class, pottery workshop, or writing session', tag_weights: { creative: 2 } },
+      ],
+    },
+    {
+      id: 'weekend-5',
+      text: 'How do you recharge after a stressful week?',
+      type: 'single',
+      options: [
+        { id: 'weekend-5a', text: 'Unplug completely and enjoy silence at home', tag_weights: { homebody: 2, creative: 1 } },
+        { id: 'weekend-5b', text: 'Get moving outdoors — a run, bike ride, or hike', tag_weights: { adventurer: 2 } },
+        { id: 'weekend-5c', text: 'Catch up with friends over drinks or a fun outing', tag_weights: { socialite: 2 } },
+        { id: 'weekend-5d', text: 'Pour your energy into making something with your hands', tag_weights: { creative: 2 } },
+      ],
+    },
+    {
+      id: 'weekend-6',
+      text: 'If you could live your dream weekend every week, it would include:',
+      type: 'single',
+      options: [
+        { id: 'weekend-6a', text: 'Zero plans, maximum comfort, and total relaxation', tag_weights: { homebody: 2 } },
+        { id: 'weekend-6b', text: 'A new destination or outdoor challenge every time', tag_weights: { adventurer: 2 } },
+        { id: 'weekend-6c', text: 'Being surrounded by the people you love most', tag_weights: { socialite: 2 } },
+        { id: 'weekend-6d', text: 'Time and space to create something meaningful', tag_weights: { creative: 2 } },
+      ],
+    },
+  ],
+  results: [
+    {
+      id: 'weekend-homebody',
+      trigger_tag: 'homebody',
+      title: 'The Cozy Homebody',
+      emoji: '🛋️',
+      description: 'Your ideal weekend is all about comfort and recharging in your personal sanctuary. Whether it\'s binge-watching your favorite show, curling up with a book, or enjoying a home-cooked meal, you know that the best moments happen at home. You turn relaxation into an art form.',
+      tags: ['relaxed', 'introverted', 'comfort-loving'],
+      news_tags: ['lifestyle', 'food', 'entertainment'],
+    },
+    {
+      id: 'weekend-adventurer',
+      trigger_tag: 'adventurer',
+      title: 'The Outdoor Adventurer',
+      emoji: '🏔️',
+      description: 'You come alive when you\'re exploring the great outdoors. Hiking, camping, road trips, or trying a new sport — your weekends are packed with movement and discovery. Sitting still isn\'t in your vocabulary, and every weekend is a chance for a new adventure.',
+      tags: ['active', 'adventurous', 'nature-loving'],
+      news_tags: ['travel', 'sports', 'outdoors'],
+    },
+    {
+      id: 'weekend-socialite',
+      trigger_tag: 'socialite',
+      title: 'The Social Butterfly',
+      emoji: '🎉',
+      description: 'Your weekends revolve around the people you love. From brunches and dinner parties to festivals and game nights, you thrive on connection and shared experiences. You\'re the one who brings everyone together, and your calendar is always full of plans.',
+      tags: ['outgoing', 'energetic', 'people-oriented'],
+      news_tags: ['entertainment', 'community', 'nightlife'],
+    },
+    {
+      id: 'weekend-creative',
+      trigger_tag: 'creative',
+      title: 'The Creative Soul',
+      emoji: '🎨',
+      description: 'Your weekends are a canvas for self-expression. Whether you\'re painting, writing, cooking something experimental, or diving into a DIY project, you need time to let your imagination run free. You find joy in making things and turning ideas into reality.',
+      tags: ['imaginative', 'artistic', 'introspective'],
+      news_tags: ['art', 'culture', 'design'],
+    },
+  ],
+}
