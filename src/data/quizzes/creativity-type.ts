@@ -1,0 +1,118 @@
+import type { Quiz } from '../../types'
+
+export const creativityTypeQuiz: Quiz = {
+  id: 'creativity-type',
+  title: 'What\'s Your Creativity Type?',
+  subtitle: 'How does your creative mind work?',
+  description: 'Answer 6 questions to discover how your creative brain operates. Are you a visual thinker, a wordsmith, a musical soul, or a logical innovator? Everyone is creative — just in different ways!',
+  emoji: '🎭',
+  theme: 'creative',
+  duration: '1 min',
+  questionCount: 6,
+  questions: [
+    {
+      id: 'cre-1',
+      text: 'When you have a great idea, how does it appear in your mind?',
+      type: 'single',
+      options: [
+        { id: 'cre-1a', text: 'As a vivid image or visual scene', tag_weights: { visual: 2 } },
+        { id: 'cre-1b', text: 'As words, phrases, or an inner monologue', tag_weights: { linguistic: 2 } },
+        { id: 'cre-1c', text: 'As a rhythm, melody, or feeling', tag_weights: { musical: 2 } },
+        { id: 'cre-1d', text: 'As a structured framework or logical pattern', tag_weights: { logical: 2 } },
+      ],
+    },
+    {
+      id: 'cre-2',
+      text: 'Which creative activity sounds most appealing?',
+      type: 'single',
+      options: [
+        { id: 'cre-2a', text: 'Photography, painting, or graphic design', tag_weights: { visual: 2 } },
+        { id: 'cre-2b', text: 'Writing stories, poetry, or blog posts', tag_weights: { linguistic: 2 } },
+        { id: 'cre-2c', text: 'Playing an instrument, producing beats, or singing', tag_weights: { musical: 2 } },
+        { id: 'cre-2d', text: 'Building apps, solving puzzles, or designing systems', tag_weights: { logical: 2 } },
+      ],
+    },
+    {
+      id: 'cre-3',
+      text: 'How do you express strong emotions?',
+      type: 'single',
+      options: [
+        { id: 'cre-3a', text: 'Through visual art — I draw, photograph, or create collages', tag_weights: { visual: 2 } },
+        { id: 'cre-3b', text: 'Through writing — I journal, write letters, or compose poems', tag_weights: { linguistic: 2 } },
+        { id: 'cre-3c', text: 'Through music — I play, sing, or get lost in a playlist', tag_weights: { musical: 2 } },
+        { id: 'cre-3d', text: 'Through problem-solving — I channel it into productive work', tag_weights: { logical: 2 } },
+      ],
+    },
+    {
+      id: 'cre-4',
+      text: 'In school, which subject lit you up?',
+      type: 'single',
+      options: [
+        { id: 'cre-4a', text: 'Art class — I loved creating visual projects', tag_weights: { visual: 2 } },
+        { id: 'cre-4b', text: 'English/Literature — I loved reading and writing essays', tag_weights: { linguistic: 2 } },
+        { id: 'cre-4c', text: 'Music class — choir, band, or just listening', tag_weights: { musical: 2 } },
+        { id: 'cre-4d', text: 'Math or science — the elegance of solving problems', tag_weights: { logical: 2 } },
+      ],
+    },
+    {
+      id: 'cre-5',
+      text: 'You\'re decorating your space. What matters most?',
+      type: 'single',
+      options: [
+        { id: 'cre-5a', text: 'Color palette, art on the walls, and visual harmony', tag_weights: { visual: 2, musical: 1 } },
+        { id: 'cre-5b', text: 'A cozy reading nook with bookshelves everywhere', tag_weights: { linguistic: 2 } },
+        { id: 'cre-5c', text: 'A great sound system and instruments within reach', tag_weights: { musical: 2 } },
+        { id: 'cre-5d', text: 'A clean, functional workspace with smart organization', tag_weights: { logical: 2 } },
+      ],
+    },
+    {
+      id: 'cre-6',
+      text: 'If you could master one creative skill overnight, it would be:',
+      type: 'single',
+      options: [
+        { id: 'cre-6a', text: 'Filmmaking or animation', tag_weights: { visual: 2 } },
+        { id: 'cre-6b', text: 'Writing a bestselling novel', tag_weights: { linguistic: 2 } },
+        { id: 'cre-6c', text: 'Composing an orchestral symphony', tag_weights: { musical: 2 } },
+        { id: 'cre-6d', text: 'Inventing a product that changes the world', tag_weights: { logical: 2 } },
+      ],
+    },
+  ],
+  results: [
+    {
+      id: 'cre-visual',
+      trigger_tag: 'visual',
+      title: 'The Visual Artist',
+      emoji: '📸',
+      description: 'You think in pictures! Your creative brain processes the world through color, shape, and composition. Whether it\'s photography, design, painting, or film, you have a natural eye for visual storytelling. The world is your canvas.',
+      tags: ['visual', 'aesthetic', 'imaginative'],
+      news_tags: ['art', 'entertainment', 'culture'],
+    },
+    {
+      id: 'cre-linguistic',
+      trigger_tag: 'linguistic',
+      title: 'The Word Wizard',
+      emoji: '✍️',
+      description: 'Words are your superpower! You craft sentences that move people, tell stories that captivate, and express complex emotions with precision. Whether you\'re writing fiction, poetry, or a killer email, your way with words is extraordinary.',
+      tags: ['eloquent', 'thoughtful', 'expressive'],
+      news_tags: ['books', 'education', 'culture'],
+    },
+    {
+      id: 'cre-musical',
+      trigger_tag: 'musical',
+      title: 'The Musical Soul',
+      emoji: '🎵',
+      description: 'Music flows through everything you do! You hear rhythms in everyday life, feel emotions through melodies, and express yourself through sound. Whether you play, sing, produce, or just listen deeply, music is the language of your soul.',
+      tags: ['rhythmic', 'emotional', 'harmonious'],
+      news_tags: ['music', 'entertainment', 'culture'],
+    },
+    {
+      id: 'cre-logical',
+      trigger_tag: 'logical',
+      title: 'The Logical Innovator',
+      emoji: '⚙️',
+      description: 'Your creativity lives in systems and solutions! You see patterns where others see chaos and build elegant solutions to complex problems. Your innovation is driven by logic, structure, and a deep desire to make things work better.',
+      tags: ['systematic', 'innovative', 'precise'],
+      news_tags: ['technology', 'science', 'business'],
+    },
+  ],
+}

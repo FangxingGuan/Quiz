@@ -25,6 +25,16 @@ const themeBg: Record<string, string> = {
   book: 'bg-book-light',
   music: 'bg-music-light',
   brain: 'bg-brain-light',
+  friend: 'bg-friend-light',
+  social: 'bg-social-light',
+  eq: 'bg-eq-light',
+  travel: 'bg-travel-light',
+  career: 'bg-career-light',
+  foodie: 'bg-foodie-light',
+  sleep: 'bg-sleep-light',
+  creative: 'bg-creative-light',
+  comm: 'bg-comm-light',
+  animal: 'bg-animal-light',
 }
 
 const themeBtn: Record<string, string> = {
@@ -44,6 +54,16 @@ const themeBtn: Record<string, string> = {
   book: 'bg-book hover:bg-book-dark',
   music: 'bg-music hover:bg-music-dark',
   brain: 'bg-brain hover:bg-brain-dark',
+  friend: 'bg-friend hover:bg-friend-dark',
+  social: 'bg-social hover:bg-social-dark',
+  eq: 'bg-eq hover:bg-eq-dark',
+  travel: 'bg-travel hover:bg-travel-dark',
+  career: 'bg-career hover:bg-career-dark',
+  foodie: 'bg-foodie hover:bg-foodie-dark',
+  sleep: 'bg-sleep hover:bg-sleep-dark',
+  creative: 'bg-creative hover:bg-creative-dark',
+  comm: 'bg-comm hover:bg-comm-dark',
+  animal: 'bg-animal hover:bg-animal-dark',
 }
 
 export default function ShareCard({ quiz, result, onClose }: ShareCardProps) {

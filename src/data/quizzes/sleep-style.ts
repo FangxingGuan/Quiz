@@ -1,0 +1,118 @@
+import type { Quiz } from '../../types'
+
+export const sleepStyleQuiz: Quiz = {
+  id: 'sleep-style',
+  title: 'What\'s Your Sleep Style?',
+  subtitle: 'Are you an early bird or a night owl?',
+  description: 'Answer 6 questions about your sleep habits, energy patterns, and nighttime routines. Discover whether you\'re a dawn warrior, a midnight genius, a power napper, or a sleep rebel!',
+  emoji: '😴',
+  theme: 'sleep',
+  duration: '1 min',
+  questionCount: 6,
+  questions: [
+    {
+      id: 'slp-1',
+      text: 'What time do you naturally wake up on a day with no alarm?',
+      type: 'single',
+      options: [
+        { id: 'slp-1a', text: 'Before 7 AM — I\'m up with the sun', tag_weights: { earlybird: 2 } },
+        { id: 'slp-1b', text: 'Around 9-10 AM — a solid sleep', tag_weights: { napper: 1, flexible: 1 } },
+        { id: 'slp-1c', text: 'After 11 AM — I was up until 3 AM', tag_weights: { nightowl: 2 } },
+        { id: 'slp-1d', text: 'It\'s completely random — could be any time', tag_weights: { flexible: 2 } },
+      ],
+    },
+    {
+      id: 'slp-2',
+      text: 'When do you do your best work?',
+      type: 'single',
+      options: [
+        { id: 'slp-2a', text: 'Early morning — my brain is sharpest before noon', tag_weights: { earlybird: 2 } },
+        { id: 'slp-2b', text: 'Late at night — the quiet and darkness fuel my creativity', tag_weights: { nightowl: 2 } },
+        { id: 'slp-2c', text: 'After a good nap — a quick recharge works wonders', tag_weights: { napper: 2 } },
+        { id: 'slp-2d', text: 'It depends on the day — no consistent pattern', tag_weights: { flexible: 2 } },
+      ],
+    },
+    {
+      id: 'slp-3',
+      text: 'Your relationship with naps is:',
+      type: 'single',
+      options: [
+        { id: 'slp-3a', text: 'Never nap — it ruins my early bedtime routine', tag_weights: { earlybird: 2 } },
+        { id: 'slp-3b', text: 'I nap every single day — it\'s sacred', tag_weights: { napper: 2 } },
+        { id: 'slp-3c', text: 'Naps are for catching up after my late nights', tag_weights: { nightowl: 2, napper: 1 } },
+        { id: 'slp-3d', text: 'I nap when I feel like it — no rules', tag_weights: { flexible: 2 } },
+      ],
+    },
+    {
+      id: 'slp-4',
+      text: 'It\'s 11 PM on a Saturday. Where are you?',
+      type: 'single',
+      options: [
+        { id: 'slp-4a', text: 'Already asleep — tomorrow\'s an early morning hike', tag_weights: { earlybird: 2 } },
+        { id: 'slp-4b', text: 'Deep in a creative zone — writing, coding, or gaming', tag_weights: { nightowl: 2 } },
+        { id: 'slp-4c', text: 'On the couch, drifting in and out of a cozy doze', tag_weights: { napper: 2 } },
+        { id: 'slp-4d', text: 'Could be out dancing or could be in bed — depends on the mood', tag_weights: { flexible: 2 } },
+      ],
+    },
+    {
+      id: 'slp-5',
+      text: 'How do you feel about mornings?',
+      type: 'single',
+      options: [
+        { id: 'slp-5a', text: 'I love them! The world is fresh and full of potential', tag_weights: { earlybird: 2 } },
+        { id: 'slp-5b', text: 'They\'re my enemy — don\'t talk to me before coffee', tag_weights: { nightowl: 2 } },
+        { id: 'slp-5c', text: 'They\'re fine if I had a good nap the day before', tag_weights: { napper: 2 } },
+        { id: 'slp-5d', text: 'Some mornings I\'m great, others I\'m a zombie', tag_weights: { flexible: 2 } },
+      ],
+    },
+    {
+      id: 'slp-6',
+      text: 'Your ideal sleep setup is:',
+      type: 'single',
+      options: [
+        { id: 'slp-6a', text: 'Strict 10 PM bedtime, 6 AM alarm, blackout curtains', tag_weights: { earlybird: 2 } },
+        { id: 'slp-6b', text: 'Fall asleep at 2 AM watching YouTube, wake up at noon', tag_weights: { nightowl: 2 } },
+        { id: 'slp-6c', text: 'Short night sleep + a glorious midday power nap', tag_weights: { napper: 2 } },
+        { id: 'slp-6d', text: 'I adapt to whatever schedule life throws at me', tag_weights: { flexible: 2 } },
+      ],
+    },
+  ],
+  results: [
+    {
+      id: 'slp-earlybird',
+      trigger_tag: 'earlybird',
+      title: 'The Dawn Warrior',
+      emoji: '🌅',
+      description: 'Rise and shine! You\'re at your best when the rest of the world is still asleep. Your mornings are sacred, your routines are rock-solid, and you get more done before 9 AM than most people do all day. The early bird truly gets the worm!',
+      tags: ['disciplined', 'productive', 'energetic'],
+      news_tags: ['health', 'productivity', 'lifestyle'],
+    },
+    {
+      id: 'slp-nightowl',
+      trigger_tag: 'nightowl',
+      title: 'The Midnight Genius',
+      emoji: '🦉',
+      description: 'The night is when your magic happens! While the world sleeps, your creativity, focus, and energy come alive. Some of the greatest ideas in history were born after midnight — and yours are no different. Own your nocturnal power!',
+      tags: ['creative', 'nocturnal', 'focused'],
+      news_tags: ['entertainment', 'technology', 'culture'],
+    },
+    {
+      id: 'slp-napper',
+      trigger_tag: 'napper',
+      title: 'The Power Napper',
+      emoji: '💤',
+      description: 'You\'ve mastered the art of the strategic nap! You know that a quick 20-minute recharge can transform your entire day. Sleep isn\'t just for nighttime — it\'s a tool you wield with precision. Einstein and Da Vinci were nappers too!',
+      tags: ['strategic', 'refreshed', 'balanced'],
+      news_tags: ['health', 'science', 'lifestyle'],
+    },
+    {
+      id: 'slp-flexible',
+      trigger_tag: 'flexible',
+      title: 'The Sleep Rebel',
+      emoji: '🎲',
+      description: 'You don\'t follow a sleep schedule — your sleep follows you! Some nights you\'re out at midnight, others you\'re in bed by 9. Your flexibility is actually a superpower — you adapt to whatever life demands without missing a beat.',
+      tags: ['adaptable', 'unpredictable', 'free-spirited'],
+      news_tags: ['lifestyle', 'entertainment', 'travel'],
+    },
+  ],
+}

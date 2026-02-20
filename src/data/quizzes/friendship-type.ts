@@ -1,0 +1,118 @@
+import type { Quiz } from '../../types'
+
+export const friendshipTypeQuiz: Quiz = {
+  id: 'friendship-type',
+  title: 'What Kind of Friend Are You?',
+  subtitle: 'Discover your friendship superpower',
+  description: 'Answer 6 questions about how you show up for the people in your life. Are you the loyal rock, the life of the party, the wise advisor, or the adventure buddy?',
+  emoji: '🤗',
+  theme: 'friend',
+  duration: '1 min',
+  questionCount: 6,
+  questions: [
+    {
+      id: 'fri-1',
+      text: 'Your best friend is going through a breakup. What do you do?',
+      type: 'single',
+      options: [
+        { id: 'fri-1a', text: 'Drop everything and show up with ice cream and tissues', tag_weights: { loyal: 2, advisor: 1 } },
+        { id: 'fri-1b', text: 'Plan a fun night out to take their mind off things', tag_weights: { energizer: 2, adventurer: 1 } },
+        { id: 'fri-1c', text: 'Give them thoughtful advice and help them process it', tag_weights: { advisor: 2, loyal: 1 } },
+        { id: 'fri-1d', text: 'Book a spontaneous road trip to shake things up', tag_weights: { adventurer: 2, energizer: 1 } },
+      ],
+    },
+    {
+      id: 'fri-2',
+      text: 'In your friend group, you\'re usually the one who:',
+      type: 'single',
+      options: [
+        { id: 'fri-2a', text: 'Remembers everyone\'s birthdays and checks in regularly', tag_weights: { loyal: 2 } },
+        { id: 'fri-2b', text: 'Organizes the group chat and plans get-togethers', tag_weights: { energizer: 2 } },
+        { id: 'fri-2c', text: 'People come to for life advice and honest opinions', tag_weights: { advisor: 2 } },
+        { id: 'fri-2d', text: 'Suggests wild ideas that everyone ends up loving', tag_weights: { adventurer: 2 } },
+      ],
+    },
+    {
+      id: 'fri-3',
+      text: 'How do you prefer to spend time with friends?',
+      type: 'single',
+      options: [
+        { id: 'fri-3a', text: 'One-on-one deep conversations over coffee', tag_weights: { advisor: 2, loyal: 1 } },
+        { id: 'fri-3b', text: 'Big group hangouts with lots of laughs', tag_weights: { energizer: 2 } },
+        { id: 'fri-3c', text: 'Trying something new — a class, hike, or trip', tag_weights: { adventurer: 2 } },
+        { id: 'fri-3d', text: 'Cozy nights in with a small, close group', tag_weights: { loyal: 2 } },
+      ],
+    },
+    {
+      id: 'fri-4',
+      text: 'A friend cancels plans at the last minute. Your reaction?',
+      type: 'single',
+      options: [
+        { id: 'fri-4a', text: 'No worries — I check if they\'re okay and reschedule', tag_weights: { loyal: 2, advisor: 1 } },
+        { id: 'fri-4b', text: 'I quickly text the group to see who else is free', tag_weights: { energizer: 2 } },
+        { id: 'fri-4c', text: 'I use the free time for a solo adventure instead', tag_weights: { adventurer: 2 } },
+        { id: 'fri-4d', text: 'I let them know it\'s fine but gently express I was looking forward to it', tag_weights: { advisor: 2 } },
+      ],
+    },
+    {
+      id: 'fri-5',
+      text: 'What do you value most in a friendship?',
+      type: 'single',
+      options: [
+        { id: 'fri-5a', text: 'Trust and consistency — knowing they\'ll always be there', tag_weights: { loyal: 2 } },
+        { id: 'fri-5b', text: 'Fun and energy — never a dull moment together', tag_weights: { energizer: 2 } },
+        { id: 'fri-5c', text: 'Honesty and depth — real conversations that matter', tag_weights: { advisor: 2 } },
+        { id: 'fri-5d', text: 'Shared experiences — making memories together', tag_weights: { adventurer: 2 } },
+      ],
+    },
+    {
+      id: 'fri-6',
+      text: 'Your friend achieves something amazing. How do you celebrate?',
+      type: 'single',
+      options: [
+        { id: 'fri-6a', text: 'Write them a heartfelt message about how proud I am', tag_weights: { loyal: 2 } },
+        { id: 'fri-6b', text: 'Throw a surprise party and invite everyone', tag_weights: { energizer: 2 } },
+        { id: 'fri-6c', text: 'Take them out for a meaningful one-on-one dinner', tag_weights: { advisor: 1, loyal: 1 } },
+        { id: 'fri-6d', text: 'Plan a celebratory adventure — skydiving, anyone?', tag_weights: { adventurer: 2 } },
+      ],
+    },
+  ],
+  results: [
+    {
+      id: 'fri-loyal',
+      trigger_tag: 'loyal',
+      title: 'The Ride-or-Die',
+      emoji: '🛡️',
+      description: 'You are the rock that everyone leans on. Your loyalty runs deep, and your friends know they can count on you no matter what. You show love through consistency, thoughtfulness, and unwavering support. You\'re the kind of friend everyone deserves.',
+      tags: ['loyal', 'reliable', 'caring'],
+      news_tags: ['community', 'lifestyle', 'health'],
+    },
+    {
+      id: 'fri-energizer',
+      trigger_tag: 'energizer',
+      title: 'The Social Spark',
+      emoji: '🎉',
+      description: 'You bring the energy! You\'re the glue that holds the group together, always organizing hangouts and making sure everyone feels included. Your enthusiasm is contagious and you have a gift for turning ordinary moments into unforgettable memories.',
+      tags: ['energetic', 'inclusive', 'fun'],
+      news_tags: ['entertainment', 'community', 'lifestyle'],
+    },
+    {
+      id: 'fri-advisor',
+      trigger_tag: 'advisor',
+      title: 'The Wise Confidant',
+      emoji: '🦉',
+      description: 'You\'re the friend everyone turns to for honest, thoughtful advice. You listen deeply, ask the right questions, and help people see things clearly. Your emotional intelligence and wisdom make you an irreplaceable presence in your friends\' lives.',
+      tags: ['wise', 'empathetic', 'honest'],
+      news_tags: ['psychology', 'education', 'health'],
+    },
+    {
+      id: 'fri-adventurer',
+      trigger_tag: 'adventurer',
+      title: 'The Adventure Buddy',
+      emoji: '🏔️',
+      description: 'Life with you is never boring! You push your friends outside their comfort zones and create experiences they\'ll never forget. From spontaneous road trips to trying exotic food, you believe the best friendships are built through shared adventures.',
+      tags: ['spontaneous', 'adventurous', 'inspiring'],
+      news_tags: ['travel', 'sports', 'entertainment'],
+    },
+  ],
+}

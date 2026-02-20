@@ -24,6 +24,16 @@ const progressColors: Record<string, string> = {
   book: 'bg-book',
   music: 'bg-music',
   brain: 'bg-brain',
+  friend: 'bg-friend',
+  social: 'bg-social',
+  eq: 'bg-eq',
+  travel: 'bg-travel',
+  career: 'bg-career',
+  foodie: 'bg-foodie',
+  sleep: 'bg-sleep',
+  creative: 'bg-creative',
+  comm: 'bg-comm',
+  animal: 'bg-animal',
 }
 
 const multiSubmitColors: Record<string, string> = {
@@ -43,6 +53,16 @@ const multiSubmitColors: Record<string, string> = {
   book: 'bg-book hover:bg-book-dark',
   music: 'bg-music hover:bg-music-dark',
   brain: 'bg-brain hover:bg-brain-dark',
+  friend: 'bg-friend hover:bg-friend-dark',
+  social: 'bg-social hover:bg-social-dark',
+  eq: 'bg-eq hover:bg-eq-dark',
+  travel: 'bg-travel hover:bg-travel-dark',
+  career: 'bg-career hover:bg-career-dark',
+  foodie: 'bg-foodie hover:bg-foodie-dark',
+  sleep: 'bg-sleep hover:bg-sleep-dark',
+  creative: 'bg-creative hover:bg-creative-dark',
+  comm: 'bg-comm hover:bg-comm-dark',
+  animal: 'bg-animal hover:bg-animal-dark',
 }
 
 export default function QuestionPage() {

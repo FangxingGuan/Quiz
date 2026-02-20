@@ -1,0 +1,118 @@
+import type { Quiz } from '../../types'
+
+export const socialStyleQuiz: Quiz = {
+  id: 'social-style',
+  title: 'What\'s Your Social Style?',
+  subtitle: 'How do you navigate social situations?',
+  description: 'Answer 6 questions to discover whether you\'re a natural leader, a magnetic connector, a thoughtful observer, or the life of the party. Your social style is your superpower!',
+  emoji: '🗣️',
+  theme: 'social',
+  duration: '1 min',
+  questionCount: 6,
+  questions: [
+    {
+      id: 'soc-1',
+      text: 'You arrive at a networking event. What\'s your strategy?',
+      type: 'single',
+      options: [
+        { id: 'soc-1a', text: 'Take charge — introduce myself to key people and steer conversations', tag_weights: { leader: 2, connector: 1 } },
+        { id: 'soc-1b', text: 'Float around and naturally connect different people together', tag_weights: { connector: 2, entertainer: 1 } },
+        { id: 'soc-1c', text: 'Find a quiet corner, observe the room, then approach selectively', tag_weights: { observer: 2 } },
+        { id: 'soc-1d', text: 'Be loud, funny, and make sure everyone remembers me', tag_weights: { entertainer: 2, leader: 1 } },
+      ],
+    },
+    {
+      id: 'soc-2',
+      text: 'In a group project, you naturally gravitate toward:',
+      type: 'single',
+      options: [
+        { id: 'soc-2a', text: 'Leading the team and making final decisions', tag_weights: { leader: 2 } },
+        { id: 'soc-2b', text: 'Making sure everyone\'s voice is heard and mediating conflicts', tag_weights: { connector: 2 } },
+        { id: 'soc-2c', text: 'Doing deep research and providing thorough analysis', tag_weights: { observer: 2 } },
+        { id: 'soc-2d', text: 'Keeping the energy up and making meetings enjoyable', tag_weights: { entertainer: 2 } },
+      ],
+    },
+    {
+      id: 'soc-3',
+      text: 'How would your friends describe you at a dinner party?',
+      type: 'single',
+      options: [
+        { id: 'soc-3a', text: 'The one who commands the table and leads the toast', tag_weights: { leader: 2 } },
+        { id: 'soc-3b', text: 'The one making sure everyone is talking to each other', tag_weights: { connector: 2, observer: 1 } },
+        { id: 'soc-3c', text: 'The one having deep, meaningful side conversations', tag_weights: { observer: 2 } },
+        { id: 'soc-3d', text: 'The one telling hilarious stories that have everyone crying laughing', tag_weights: { entertainer: 2 } },
+      ],
+    },
+    {
+      id: 'soc-4',
+      text: 'There\'s a heated disagreement in your friend group. You:',
+      type: 'single',
+      options: [
+        { id: 'soc-4a', text: 'Step in and make a decision that moves things forward', tag_weights: { leader: 2 } },
+        { id: 'soc-4b', text: 'Listen to both sides and help them find common ground', tag_weights: { connector: 2 } },
+        { id: 'soc-4c', text: 'Stay quiet and share my perspective only if asked', tag_weights: { observer: 2 } },
+        { id: 'soc-4d', text: 'Crack a joke to diffuse the tension', tag_weights: { entertainer: 2 } },
+      ],
+    },
+    {
+      id: 'soc-5',
+      text: 'What gives you the most energy in social situations?',
+      type: 'single',
+      options: [
+        { id: 'soc-5a', text: 'Influencing outcomes and seeing my ideas come to life', tag_weights: { leader: 2 } },
+        { id: 'soc-5b', text: 'Bringing people together who wouldn\'t otherwise meet', tag_weights: { connector: 2 } },
+        { id: 'soc-5c', text: 'Understanding people on a deeper level through observation', tag_weights: { observer: 2 } },
+        { id: 'soc-5d', text: 'Making people laugh and creating a fun atmosphere', tag_weights: { entertainer: 2 } },
+      ],
+    },
+    {
+      id: 'soc-6',
+      text: 'Which social media habit sounds most like you?',
+      type: 'single',
+      options: [
+        { id: 'soc-6a', text: 'Posting opinions and thought leadership content', tag_weights: { leader: 2 } },
+        { id: 'soc-6b', text: 'Tagging friends, sharing their posts, and hyping them up', tag_weights: { connector: 2 } },
+        { id: 'soc-6c', text: 'Mostly lurking and reading — I rarely post', tag_weights: { observer: 2 } },
+        { id: 'soc-6d', text: 'Posting memes, stories, and entertaining content', tag_weights: { entertainer: 2 } },
+      ],
+    },
+  ],
+  results: [
+    {
+      id: 'soc-leader',
+      trigger_tag: 'leader',
+      title: 'The Natural Leader',
+      emoji: '👑',
+      description: 'You command respect and attention in any room. People look to you for direction, decisions, and vision. Your confidence and decisiveness inspire others to follow, and you thrive when you\'re steering the ship.',
+      tags: ['decisive', 'confident', 'influential'],
+      news_tags: ['business', 'politics', 'leadership'],
+    },
+    {
+      id: 'soc-connector',
+      trigger_tag: 'connector',
+      title: 'The Magnetic Connector',
+      emoji: '🧲',
+      description: 'You have an incredible gift for bringing people together. You remember names, find common ground, and make everyone feel valued. Your network is your superpower, and you build bridges that change lives.',
+      tags: ['empathetic', 'networker', 'inclusive'],
+      news_tags: ['community', 'social', 'lifestyle'],
+    },
+    {
+      id: 'soc-observer',
+      trigger_tag: 'observer',
+      title: 'The Thoughtful Observer',
+      emoji: '🔭',
+      description: 'You see what others miss. While the world rushes to speak, you take the time to listen, watch, and understand. Your insights are deep and your contributions, though less frequent, carry real weight. Quality over quantity — always.',
+      tags: ['perceptive', 'reflective', 'deep'],
+      news_tags: ['psychology', 'science', 'culture'],
+    },
+    {
+      id: 'soc-entertainer',
+      trigger_tag: 'entertainer',
+      title: 'The Life of the Party',
+      emoji: '🎭',
+      description: 'You light up every room you walk into! Your humor, energy, and charisma make you unforgettable. People gravitate toward you because you make every moment more fun. Your ability to lift the mood is a rare and wonderful gift.',
+      tags: ['charismatic', 'funny', 'energetic'],
+      news_tags: ['entertainment', 'celebrity', 'lifestyle'],
+    },
+  ],
+}

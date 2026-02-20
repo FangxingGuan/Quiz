@@ -1,0 +1,118 @@
+import type { Quiz } from '../../types'
+
+export const communicationStyleQuiz: Quiz = {
+  id: 'communication-style',
+  title: 'What\'s Your Communication Style?',
+  subtitle: 'How do you connect with others?',
+  description: 'Answer 6 questions about how you express yourself, handle conflicts, and share ideas. Discover whether you\'re direct, diplomatic, analytical, or expressive — and how to communicate even better!',
+  emoji: '💬',
+  theme: 'comm',
+  duration: '1 min',
+  questionCount: 6,
+  questions: [
+    {
+      id: 'com-1',
+      text: 'Your boss asks for feedback on a project you think is flawed. You:',
+      type: 'single',
+      options: [
+        { id: 'com-1a', text: 'Say exactly what I think — honest and to the point', tag_weights: { direct: 2 } },
+        { id: 'com-1b', text: 'Sandwich the critique between compliments to soften the blow', tag_weights: { diplomatic: 2 } },
+        { id: 'com-1c', text: 'Prepare a detailed analysis with data supporting my concerns', tag_weights: { analytical: 2 } },
+        { id: 'com-1d', text: 'Use a story or metaphor to illustrate what could be better', tag_weights: { expressive: 2 } },
+      ],
+    },
+    {
+      id: 'com-2',
+      text: 'In a group conversation, you tend to:',
+      type: 'single',
+      options: [
+        { id: 'com-2a', text: 'Get straight to the point and lead the discussion', tag_weights: { direct: 2 } },
+        { id: 'com-2b', text: 'Make sure everyone gets a chance to speak', tag_weights: { diplomatic: 2 } },
+        { id: 'com-2c', text: 'Wait until I have something well-thought-out to contribute', tag_weights: { analytical: 2 } },
+        { id: 'com-2d', text: 'Share animated stories and use lots of gestures', tag_weights: { expressive: 2 } },
+      ],
+    },
+    {
+      id: 'com-3',
+      text: 'How do you prefer to deliver bad news?',
+      type: 'single',
+      options: [
+        { id: 'com-3a', text: 'Rip off the bandaid — just say it clearly and quickly', tag_weights: { direct: 2 } },
+        { id: 'com-3b', text: 'Choose my words carefully to minimize hurt', tag_weights: { diplomatic: 2 } },
+        { id: 'com-3c', text: 'Present the facts objectively and let the data speak', tag_weights: { analytical: 2 } },
+        { id: 'com-3d', text: 'Show empathy and emotion — I want them to know I care', tag_weights: { expressive: 2 } },
+      ],
+    },
+    {
+      id: 'com-4',
+      text: 'Your emails and messages are usually:',
+      type: 'single',
+      options: [
+        { id: 'com-4a', text: 'Short, clear, and action-oriented', tag_weights: { direct: 2 } },
+        { id: 'com-4b', text: 'Warm, polite, and carefully worded', tag_weights: { diplomatic: 2 } },
+        { id: 'com-4c', text: 'Detailed with bullet points and supporting info', tag_weights: { analytical: 2 } },
+        { id: 'com-4d', text: 'Full of exclamation marks, emojis, and personality', tag_weights: { expressive: 2 } },
+      ],
+    },
+    {
+      id: 'com-5',
+      text: 'During a disagreement, your approach is:',
+      type: 'single',
+      options: [
+        { id: 'com-5a', text: 'State my position firmly and defend it', tag_weights: { direct: 2 } },
+        { id: 'com-5b', text: 'Find a compromise that works for both sides', tag_weights: { diplomatic: 2 } },
+        { id: 'com-5c', text: 'Lay out the logical reasoning and evidence', tag_weights: { analytical: 2 } },
+        { id: 'com-5d', text: 'Express how the situation makes me feel', tag_weights: { expressive: 2 } },
+      ],
+    },
+    {
+      id: 'com-6',
+      text: 'What do people come to you for?',
+      type: 'single',
+      options: [
+        { id: 'com-6a', text: 'Honest opinions — they know I won\'t sugarcoat it', tag_weights: { direct: 2 } },
+        { id: 'com-6b', text: 'Mediating conflicts — I help people find common ground', tag_weights: { diplomatic: 2 } },
+        { id: 'com-6c', text: 'Breaking down complex topics into clear explanations', tag_weights: { analytical: 2 } },
+        { id: 'com-6d', text: 'Motivation and enthusiasm — I get people excited', tag_weights: { expressive: 2 } },
+      ],
+    },
+  ],
+  results: [
+    {
+      id: 'com-direct',
+      trigger_tag: 'direct',
+      title: 'The Straight Shooter',
+      emoji: '🎯',
+      description: 'You say what you mean and mean what you say. No fluff, no games. People respect your honesty and know exactly where they stand with you. Your clarity is a superpower in a world full of mixed signals.',
+      tags: ['honest', 'clear', 'confident'],
+      news_tags: ['business', 'politics', 'sports'],
+    },
+    {
+      id: 'com-diplomatic',
+      trigger_tag: 'diplomatic',
+      title: 'The Smooth Diplomat',
+      emoji: '🕊️',
+      description: 'You have a gift for making everyone feel heard and respected. You navigate sensitive topics with grace, build consensus, and resolve conflicts before they escalate. Your words heal, connect, and build bridges.',
+      tags: ['tactful', 'harmonious', 'empathetic'],
+      news_tags: ['community', 'psychology', 'politics'],
+    },
+    {
+      id: 'com-analytical',
+      trigger_tag: 'analytical',
+      title: 'The Precise Communicator',
+      emoji: '🔬',
+      description: 'You communicate with precision and depth. Every word is chosen carefully, every argument backed by evidence. People trust your analysis because it\'s always thorough and well-reasoned. Clarity and accuracy are your trademarks.',
+      tags: ['precise', 'thorough', 'logical'],
+      news_tags: ['science', 'technology', 'education'],
+    },
+    {
+      id: 'com-expressive',
+      trigger_tag: 'expressive',
+      title: 'The Passionate Storyteller',
+      emoji: '🌈',
+      description: 'You communicate with emotion, energy, and flair! Your words paint pictures, your stories captivate, and your enthusiasm is infectious. People are drawn to your warmth and authenticity. You don\'t just communicate — you connect.',
+      tags: ['passionate', 'charismatic', 'authentic'],
+      news_tags: ['entertainment', 'arts', 'lifestyle'],
+    },
+  ],
+}

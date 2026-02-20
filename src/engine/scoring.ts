@@ -154,6 +154,30 @@ export function determineResult(quiz: Quiz, scores: Record<string, number>): Qui
     return quiz.results.find(r => r.trigger_tag === tag) ?? quiz.results[0]
   }
 
+  // Tag-based quizzes: friendship, social, travel, career, food, sleep, creativity, communication, spirit animal
+  if (
+    quiz.id === 'friendship-type' || quiz.id === 'social-style' ||
+    quiz.id === 'travel-personality' || quiz.id === 'career-path' ||
+    quiz.id === 'food-personality' || quiz.id === 'sleep-style' ||
+    quiz.id === 'creativity-type' || quiz.id === 'communication-style' ||
+    quiz.id === 'spirit-animal'
+  ) {
+    const tag = getHighestTag(scores)
+    return quiz.results.find(r => r.trigger_tag === tag) ?? quiz.results[0]
+  }
+
+  // EQ test: threshold-based (same pattern as stress/confidence)
+  if (quiz.id === 'eq-test') {
+    const eqScore = scores['eq'] ?? 0
+    if (eqScore <= 9) {
+      return quiz.results.find(r => r.trigger === 'developing') ?? quiz.results[0]
+    } else if (eqScore <= 14) {
+      return quiz.results.find(r => r.trigger === 'balanced') ?? quiz.results[1]
+    } else {
+      return quiz.results.find(r => r.trigger === 'master') ?? quiz.results[2]
+    }
+  }
+
   // Brain games: threshold-based on correct answers
   if (quiz.id === 'brain-games') {
     const correctScore = scores['correct'] ?? 0

@@ -1,0 +1,118 @@
+import type { Quiz } from '../../types'
+
+export const foodPersonalityQuiz: Quiz = {
+  id: 'food-personality',
+  title: 'What\'s Your Food Personality?',
+  subtitle: 'Your eating habits reveal who you are',
+  description: 'Answer 6 questions about your food preferences, cooking habits, and dining style to discover your food personality. Are you a daring foodie, a comfort lover, a health nut, or a social diner?',
+  emoji: '🍕',
+  theme: 'foodie',
+  duration: '1 min',
+  questionCount: 6,
+  questions: [
+    {
+      id: 'food-1',
+      text: 'A new restaurant opens in your neighborhood. You:',
+      type: 'single',
+      options: [
+        { id: 'food-1a', text: 'Rush there on opening night — I need to try everything first', tag_weights: { adventurous: 2, social: 1 } },
+        { id: 'food-1b', text: 'Check if they have my favorite comfort dish on the menu', tag_weights: { comfort: 2 } },
+        { id: 'food-1c', text: 'Look at the menu for healthy, clean options first', tag_weights: { health: 2 } },
+        { id: 'food-1d', text: 'Invite a group of friends to try it together', tag_weights: { social: 2, adventurous: 1 } },
+      ],
+    },
+    {
+      id: 'food-2',
+      text: 'Your go-to meal on a stressful day is:',
+      type: 'single',
+      options: [
+        { id: 'food-2a', text: 'Something spicy and bold — the more exotic the better', tag_weights: { adventurous: 2 } },
+        { id: 'food-2b', text: 'Mac and cheese, pizza, or grandma\'s recipe', tag_weights: { comfort: 2 } },
+        { id: 'food-2c', text: 'A fresh salad or a protein-packed smoothie', tag_weights: { health: 2 } },
+        { id: 'food-2d', text: 'Takeout with friends while binge-watching a show', tag_weights: { social: 2, comfort: 1 } },
+      ],
+    },
+    {
+      id: 'food-3',
+      text: 'How do you feel about trying insects or unusual foods?',
+      type: 'single',
+      options: [
+        { id: 'food-3a', text: 'Bring it on — I\'ll eat anything at least once', tag_weights: { adventurous: 2 } },
+        { id: 'food-3b', text: 'No thanks — I\'ll stick to what I know and love', tag_weights: { comfort: 2 } },
+        { id: 'food-3c', text: 'Only if it\'s nutritious and sustainably sourced', tag_weights: { health: 2 } },
+        { id: 'food-3d', text: 'Maybe if my friends dared me and we all did it together', tag_weights: { social: 2 } },
+      ],
+    },
+    {
+      id: 'food-4',
+      text: 'Your ideal cooking situation is:',
+      type: 'single',
+      options: [
+        { id: 'food-4a', text: 'Experimenting with recipes from a country I\'ve never visited', tag_weights: { adventurous: 2 } },
+        { id: 'food-4b', text: 'Perfecting my family\'s secret recipe to absolute perfection', tag_weights: { comfort: 2 } },
+        { id: 'food-4c', text: 'Meal prepping clean, balanced meals for the week', tag_weights: { health: 2 } },
+        { id: 'food-4d', text: 'Hosting a big dinner party and cooking for a crowd', tag_weights: { social: 2 } },
+      ],
+    },
+    {
+      id: 'food-5',
+      text: 'What\'s on your phone\'s camera roll?',
+      type: 'single',
+      options: [
+        { id: 'food-5a', text: 'Photos of exotic dishes from markets and street vendors', tag_weights: { adventurous: 2 } },
+        { id: 'food-5b', text: 'Cozy homemade meals and baked goods', tag_weights: { comfort: 2 } },
+        { id: 'food-5c', text: 'Colorful smoothie bowls and meal prep containers', tag_weights: { health: 2 } },
+        { id: 'food-5d', text: 'Group photos at restaurants and brunch spots', tag_weights: { social: 2 } },
+      ],
+    },
+    {
+      id: 'food-6',
+      text: 'If you could have any food superpower, it would be:',
+      type: 'single',
+      options: [
+        { id: 'food-6a', text: 'Instantly mastering any cuisine in the world', tag_weights: { adventurous: 2 } },
+        { id: 'food-6b', text: 'Making anything taste exactly like mom\'s cooking', tag_weights: { comfort: 2 } },
+        { id: 'food-6c', text: 'Knowing the exact nutrition of any food just by looking at it', tag_weights: { health: 2 } },
+        { id: 'food-6d', text: 'Always getting a table at the hottest restaurant for my crew', tag_weights: { social: 2 } },
+      ],
+    },
+  ],
+  results: [
+    {
+      id: 'food-adventurous',
+      trigger_tag: 'adventurous',
+      title: 'The Fearless Foodie',
+      emoji: '🌶️',
+      description: 'You eat to explore! No dish is too strange, no flavor too bold. You seek out authentic, unusual, and daring foods wherever you go. Your palate is as adventurous as your spirit, and your food experiences are legendary.',
+      tags: ['daring', 'curious', 'worldly'],
+      news_tags: ['food', 'travel', 'culture'],
+    },
+    {
+      id: 'food-comfort',
+      trigger_tag: 'comfort',
+      title: 'The Comfort Food Lover',
+      emoji: '🧸',
+      description: 'Food is love, and you know it. You find deep joy in familiar flavors, family recipes, and the warmth of a perfectly cooked comfort dish. Your kitchen is your happy place and your cooking makes everyone feel at home.',
+      tags: ['nostalgic', 'warm', 'devoted'],
+      news_tags: ['food', 'lifestyle', 'community'],
+    },
+    {
+      id: 'food-health',
+      trigger_tag: 'health',
+      title: 'The Clean Eater',
+      emoji: '🥗',
+      description: 'You treat your body like a temple and your plate is your prescription. You\'re mindful about what goes into your body, love fresh whole foods, and believe nutrition is the foundation of a great life. Your fridge is an inspiration!',
+      tags: ['disciplined', 'mindful', 'health-conscious'],
+      news_tags: ['health', 'food', 'science'],
+    },
+    {
+      id: 'food-social',
+      trigger_tag: 'social',
+      title: 'The Social Diner',
+      emoji: '🥂',
+      description: 'For you, food is about the company! The best meals are shared with friends, family, or strangers who become friends. You love discovering restaurants, hosting dinners, and making every meal a social occasion. Eating alone? Never heard of it.',
+      tags: ['social', 'generous', 'connector'],
+      news_tags: ['food', 'entertainment', 'community'],
+    },
+  ],
+}

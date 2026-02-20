@@ -11,7 +11,7 @@ export interface Question {
   options: Option[]
 }
 
-export type QuizTheme = 'mbti' | 'news' | 'love' | 'tags' | 'movie' | 'horoscope' | 'stress' | 'trending' | 'weekend' | 'celebrity' | 'bigfive' | 'decision' | 'confidence' | 'book' | 'music' | 'brain'
+export type QuizTheme = 'mbti' | 'news' | 'love' | 'tags' | 'movie' | 'horoscope' | 'stress' | 'trending' | 'weekend' | 'celebrity' | 'bigfive' | 'decision' | 'confidence' | 'book' | 'music' | 'brain' | 'friend' | 'social' | 'eq' | 'travel' | 'career' | 'foodie' | 'sleep' | 'creative' | 'comm' | 'animal'
 
 export interface QuizResult {
   id: string

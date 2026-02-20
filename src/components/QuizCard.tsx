@@ -18,6 +18,16 @@ const themeColors: Record<string, { bg: string; border: string; text: string }> 
   book: { bg: 'bg-book-light', border: 'border-book', text: 'text-book-dark' },
   music: { bg: 'bg-music-light', border: 'border-music', text: 'text-music-dark' },
   brain: { bg: 'bg-brain-light', border: 'border-brain', text: 'text-brain-dark' },
+  friend: { bg: 'bg-friend-light', border: 'border-friend', text: 'text-friend-dark' },
+  social: { bg: 'bg-social-light', border: 'border-social', text: 'text-social-dark' },
+  eq: { bg: 'bg-eq-light', border: 'border-eq', text: 'text-eq-dark' },
+  travel: { bg: 'bg-travel-light', border: 'border-travel', text: 'text-travel-dark' },
+  career: { bg: 'bg-career-light', border: 'border-career', text: 'text-career-dark' },
+  foodie: { bg: 'bg-foodie-light', border: 'border-foodie', text: 'text-foodie-dark' },
+  sleep: { bg: 'bg-sleep-light', border: 'border-sleep', text: 'text-sleep-dark' },
+  creative: { bg: 'bg-creative-light', border: 'border-creative', text: 'text-creative-dark' },
+  comm: { bg: 'bg-comm-light', border: 'border-comm', text: 'text-comm-dark' },
+  animal: { bg: 'bg-animal-light', border: 'border-animal', text: 'text-animal-dark' },
 }
 
 interface QuizCardProps {

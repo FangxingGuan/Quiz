@@ -22,6 +22,16 @@ const themeBorders: Record<string, string> = {
   book: 'border-book bg-book-light',
   music: 'border-music bg-music-light',
   brain: 'border-brain bg-brain-light',
+  friend: 'border-friend bg-friend-light',
+  social: 'border-social bg-social-light',
+  eq: 'border-eq bg-eq-light',
+  travel: 'border-travel bg-travel-light',
+  career: 'border-career bg-career-light',
+  foodie: 'border-foodie bg-foodie-light',
+  sleep: 'border-sleep bg-sleep-light',
+  creative: 'border-creative bg-creative-light',
+  comm: 'border-comm bg-comm-light',
+  animal: 'border-animal bg-animal-light',
 }
 
 export default function OptionButton({ text, selected, onClick, theme = 'mbti' }: OptionButtonProps) {

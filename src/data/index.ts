@@ -14,6 +14,16 @@ import { confidenceIndexQuiz } from './quizzes/confidence-index'
 import { bookRecommendationQuiz } from './quizzes/book-recommendation'
 import { musicStyleQuiz } from './quizzes/music-style'
 import { brainGamesQuiz } from './quizzes/brain-games'
+import { friendshipTypeQuiz } from './quizzes/friendship-type'
+import { socialStyleQuiz } from './quizzes/social-style'
+import { eqTestQuiz } from './quizzes/eq-test'
+import { travelPersonalityQuiz } from './quizzes/travel-personality'
+import { careerPathQuiz } from './quizzes/career-path'
+import { foodPersonalityQuiz } from './quizzes/food-personality'
+import { sleepStyleQuiz } from './quizzes/sleep-style'
+import { creativityTypeQuiz } from './quizzes/creativity-type'
+import { communicationStyleQuiz } from './quizzes/communication-style'
+import { spiritAnimalQuiz } from './quizzes/spirit-animal'
 import { mockNews } from './news'
 import type { Quiz } from '../types'
 
@@ -34,6 +44,16 @@ export const quizzes: Quiz[] = [
   bookRecommendationQuiz,
   musicStyleQuiz,
   brainGamesQuiz,
+  friendshipTypeQuiz,
+  socialStyleQuiz,
+  eqTestQuiz,
+  travelPersonalityQuiz,
+  careerPathQuiz,
+  foodPersonalityQuiz,
+  sleepStyleQuiz,
+  creativityTypeQuiz,
+  communicationStyleQuiz,
+  spiritAnimalQuiz,
 ]
 
 export function getQuizById(id: string): Quiz | undefined {
