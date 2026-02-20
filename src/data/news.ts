@@ -8,7 +8,7 @@ export const mockNews: NewsArticle[] = [
     source: 'TechCrunch',
     imageUrl: 'https://picsum.photos/seed/news1/400/200',
     tags: ['tech'],
-    url: '#',
+    url: 'https://news.google.com/search?q=Apple+AI+chip+on-device+machine+learning',
   },
   {
     id: 'news-002',
@@ -17,7 +17,7 @@ export const mockNews: NewsArticle[] = [
     source: 'Science Daily',
     imageUrl: 'https://picsum.photos/seed/news2/400/200',
     tags: ['science'],
-    url: '#',
+    url: 'https://news.google.com/search?q=NASA+exoplanet+habitable+zone+James+Webb',
   },
   {
     id: 'news-003',
@@ -26,7 +26,7 @@ export const mockNews: NewsArticle[] = [
     source: 'Reuters',
     imageUrl: 'https://picsum.photos/seed/news3/400/200',
     tags: ['finance', 'business'],
-    url: '#',
+    url: 'https://news.google.com/search?q=Federal+Reserve+interest+rates+inflation',
   },
   {
     id: 'news-004',
@@ -35,7 +35,7 @@ export const mockNews: NewsArticle[] = [
     source: 'The Washington Post',
     imageUrl: 'https://picsum.photos/seed/news4/400/200',
     tags: ['politics'],
-    url: '#',
+    url: 'https://news.google.com/search?q=bipartisan+infrastructure+bill+Senate',
   },
   {
     id: 'news-005',
@@ -44,7 +44,7 @@ export const mockNews: NewsArticle[] = [
     source: 'ESPN',
     imageUrl: 'https://picsum.photos/seed/news5/400/200',
     tags: ['sports'],
-    url: '#',
+    url: 'https://news.google.com/search?q=Golden+State+Warriors+trade+NBA',
   },
   {
     id: 'news-006',
@@ -53,7 +53,7 @@ export const mockNews: NewsArticle[] = [
     source: 'Variety',
     imageUrl: 'https://picsum.photos/seed/news6/400/200',
     tags: ['entertainment'],
-    url: '#',
+    url: 'https://news.google.com/search?q=Marvel+Studios+Phase+Seven+D23',
   },
   {
     id: 'news-007',
@@ -62,7 +62,7 @@ export const mockNews: NewsArticle[] = [
     source: 'Billboard',
     imageUrl: 'https://picsum.photos/seed/news7/400/200',
     tags: ['celebrity', 'music'],
-    url: '#',
+    url: 'https://news.google.com/search?q=Taylor+Swift+new+album+streaming+record',
   },
   {
     id: 'news-008',
@@ -71,7 +71,7 @@ export const mockNews: NewsArticle[] = [
     source: 'The Lancet',
     imageUrl: 'https://picsum.photos/seed/news8/400/200',
     tags: ['health', 'food'],
-    url: '#',
+    url: 'https://news.google.com/search?q=Mediterranean+diet+heart+disease+study',
   },
   {
     id: 'news-009',
@@ -80,7 +80,7 @@ export const mockNews: NewsArticle[] = [
     source: 'Forbes',
     imageUrl: 'https://picsum.photos/seed/news9/400/200',
     tags: ['lifestyle', 'business'],
-    url: '#',
+    url: 'https://news.google.com/search?q=remote+work+office+redesign+hybrid',
   },
   {
     id: 'news-010',
@@ -89,7 +89,7 @@ export const mockNews: NewsArticle[] = [
     source: 'Eater',
     imageUrl: 'https://picsum.photos/seed/news10/400/200',
     tags: ['food', 'lifestyle'],
-    url: '#',
+    url: 'https://news.google.com/search?q=Michelin+Guide+2026+star+restaurants',
   },
   {
     id: 'news-011',
@@ -98,7 +98,7 @@ export const mockNews: NewsArticle[] = [
     source: 'Travel + Leisure',
     imageUrl: 'https://picsum.photos/seed/news11/400/200',
     tags: ['travel'],
-    url: '#',
+    url: 'https://news.google.com/search?q=Japan+Shinkansen+Tokyo+Hokkaido+high+speed+rail',
   },
   {
     id: 'news-012',
@@ -107,7 +107,7 @@ export const mockNews: NewsArticle[] = [
     source: 'The New York Times',
     imageUrl: 'https://picsum.photos/seed/news12/400/200',
     tags: ['culture', 'art'],
-    url: '#',
+    url: 'https://news.google.com/search?q=Metropolitan+Museum+Art+Mesopotamia+exhibition',
   },
   {
     id: 'news-013',
@@ -116,7 +116,7 @@ export const mockNews: NewsArticle[] = [
     source: 'The Guardian',
     imageUrl: 'https://picsum.photos/seed/news13/400/200',
     tags: ['art', 'environment'],
-    url: '#',
+    url: 'https://news.google.com/search?q=Banksy+mural+climate+change',
   },
   {
     id: 'news-014',
@@ -125,7 +125,7 @@ export const mockNews: NewsArticle[] = [
     source: 'The Verge',
     imageUrl: 'https://picsum.photos/seed/news14/400/200',
     tags: ['music', 'tech'],
-    url: '#',
+    url: 'https://news.google.com/search?q=Spotify+lossless+audio+premium',
   },
   {
     id: 'news-015',
@@ -134,7 +134,7 @@ export const mockNews: NewsArticle[] = [
     source: 'Publishers Weekly',
     imageUrl: 'https://picsum.photos/seed/news15/400/200',
     tags: ['books', 'science'],
-    url: '#',
+    url: 'https://news.google.com/search?q=quantum+physics+book+bestseller',
   },
   {
     id: 'news-016',
@@ -143,7 +143,7 @@ export const mockNews: NewsArticle[] = [
     source: 'Local News Network',
     imageUrl: 'https://picsum.photos/seed/news16/400/200',
     tags: ['community', 'environment'],
-    url: '#',
+    url: 'https://news.google.com/search?q=urban+reforestation+tree+planting+volunteers',
   },
   {
     id: 'news-017',
@@ -152,7 +152,7 @@ export const mockNews: NewsArticle[] = [
     source: 'Inside Higher Ed',
     imageUrl: 'https://picsum.photos/seed/news17/400/200',
     tags: ['education', 'tech'],
-    url: '#',
+    url: 'https://news.google.com/search?q=computer+science+enrollment+AI+university',
   },
   {
     id: 'news-018',
@@ -161,7 +161,7 @@ export const mockNews: NewsArticle[] = [
     source: 'Nature',
     imageUrl: 'https://picsum.photos/seed/news18/400/200',
     tags: ['environment', 'science'],
-    url: '#',
+    url: 'https://news.google.com/search?q=Arctic+ice+sheet+decline+climate+change',
   },
   {
     id: 'news-019',
@@ -170,7 +170,7 @@ export const mockNews: NewsArticle[] = [
     source: 'Wired',
     imageUrl: 'https://picsum.photos/seed/news19/400/200',
     tags: ['social', 'tech'],
-    url: '#',
+    url: 'https://news.google.com/search?q=social+media+content+moderation+transparency',
   },
   {
     id: 'news-020',
@@ -179,7 +179,7 @@ export const mockNews: NewsArticle[] = [
     source: 'Motor Trend',
     imageUrl: 'https://picsum.photos/seed/news20/400/200',
     tags: ['auto', 'tech'],
-    url: '#',
+    url: 'https://news.google.com/search?q=Tesla+affordable+electric+SUV',
   },
   {
     id: 'news-021',
@@ -188,7 +188,7 @@ export const mockNews: NewsArticle[] = [
     source: 'American Psychological Association',
     imageUrl: 'https://picsum.photos/seed/news21/400/200',
     tags: ['psychology', 'health'],
-    url: '#',
+    url: 'https://news.google.com/search?q=social+media+break+mental+health+study',
   },
   {
     id: 'news-022',
@@ -197,7 +197,7 @@ export const mockNews: NewsArticle[] = [
     source: 'The Atlantic',
     imageUrl: 'https://picsum.photos/seed/news22/400/200',
     tags: ['philosophy', 'education'],
-    url: '#',
+    url: 'https://news.google.com/search?q=philosophy+enrollment+surge+AI+ethics',
   },
   {
     id: 'news-023',
@@ -206,7 +206,7 @@ export const mockNews: NewsArticle[] = [
     source: 'Bloomberg',
     imageUrl: 'https://picsum.photos/seed/news23/400/200',
     tags: ['tech', 'business', 'finance'],
-    url: '#',
+    url: 'https://news.google.com/search?q=quantum+computing+startup+funding+cloud',
   },
   {
     id: 'news-024',
@@ -215,7 +215,7 @@ export const mockNews: NewsArticle[] = [
     source: 'BBC Sport',
     imageUrl: 'https://picsum.photos/seed/news24/400/200',
     tags: ['sports'],
-    url: '#',
+    url: 'https://news.google.com/search?q=World+Cup+qualifying+upsets+FIFA+rankings',
   },
   {
     id: 'news-025',
@@ -224,7 +224,7 @@ export const mockNews: NewsArticle[] = [
     source: 'CNN',
     imageUrl: 'https://picsum.photos/seed/news25/400/200',
     tags: ['celebrity', 'community', 'food'],
-    url: '#',
+    url: 'https://news.google.com/search?q=celebrity+chef+community+kitchen+free+meals',
   },
   {
     id: 'news-026',
@@ -233,7 +233,7 @@ export const mockNews: NewsArticle[] = [
     source: 'Condé Nast Traveler',
     imageUrl: 'https://picsum.photos/seed/news26/400/200',
     tags: ['travel', 'lifestyle'],
-    url: '#',
+    url: 'https://news.google.com/search?q=underrated+European+destinations+budget+travel+2026',
   },
   {
     id: 'news-027',
@@ -242,7 +242,7 @@ export const mockNews: NewsArticle[] = [
     source: 'Politico',
     imageUrl: 'https://picsum.photos/seed/news27/400/200',
     tags: ['politics'],
-    url: '#',
+    url: 'https://news.google.com/search?q=midterm+election+polling+swing+states',
   },
   {
     id: 'news-028',
@@ -251,7 +251,7 @@ export const mockNews: NewsArticle[] = [
     source: 'New England Journal of Medicine',
     imageUrl: 'https://picsum.photos/seed/news28/400/200',
     tags: ['health', 'science'],
-    url: '#',
+    url: 'https://news.google.com/search?q=gene+therapy+inherited+blindness+clinical+trial',
   },
   {
     id: 'news-029',
@@ -260,7 +260,7 @@ export const mockNews: NewsArticle[] = [
     source: 'Automotive News',
     imageUrl: 'https://picsum.photos/seed/news29/400/200',
     tags: ['auto', 'environment'],
-    url: '#',
+    url: 'https://news.google.com/search?q=Norway+electric+vehicle+sales+surpass+gas+cars',
   },
   {
     id: 'news-030',
@@ -269,6 +269,6 @@ export const mockNews: NewsArticle[] = [
     source: 'The New Yorker',
     imageUrl: 'https://picsum.photos/seed/news30/400/200',
     tags: ['books', 'culture', 'psychology', 'philosophy'],
-    url: '#',
+    url: 'https://news.google.com/search?q=sci-fi+novel+memory+erasure+ethics',
   },
 ]

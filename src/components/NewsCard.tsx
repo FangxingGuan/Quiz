@@ -35,9 +35,22 @@ export default function NewsCard({ article }: NewsCardProps) {
         </div>
       </div>
       {expanded && (
-        <p className="text-sm text-slate-600 leading-relaxed mt-3 pt-3 border-t border-slate-100">
-          {article.summary}
-        </p>
+        <div className="mt-3 pt-3 border-t border-slate-100">
+          <p className="text-sm text-slate-600 leading-relaxed">
+            {article.summary}
+          </p>
+          {article.url && article.url !== '#' && (
+            <a
+              href={article.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={(e) => e.stopPropagation()}
+              className="inline-block mt-2 text-sm text-blue-500 font-medium no-underline hover:text-blue-700"
+            >
+              Read More →
+            </a>
+          )}
+        </div>
       )}
     </div>
   )
